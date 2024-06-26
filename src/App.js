@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.css'
+import {FormProvider} from './components/BmiContext'
+import BmiWrapper from './components/BmiWrapper'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='conatiner'>
+      <div className='row text-center justify-content-center bg-img'>
+        <div className='col-12 col-md-6 border-light rounded glass-morphism'>
+          <FormProvider>
+            <BmiWrapper />
+          </FormProvider>
+        </div>
+      </div>
+     
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
+
